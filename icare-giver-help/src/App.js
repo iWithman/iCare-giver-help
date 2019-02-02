@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Dashboard from './components/dashboard/Dahboard'
+import Navbar from './components/layout/Navbar'
+import CreatePatient from './components/patients/CreatePatient'
+import PatientDetails from './components/patients/PatientDetails'
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>iCare Giver Help</h1>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar/>
+          <Switch>
+            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/create' component={CreatePatient} />
+            <Route path='/patient/:id' component={PatientDetails} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
