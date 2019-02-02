@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class CreatePatient extends Component {
+class AddPatient extends Component {
   state = {
     name: '',
     gender: '',
@@ -52,4 +52,4 @@ class CreatePatient extends Component {
   }
 }
 
-export default CreatePatient
+export default AddPatient
