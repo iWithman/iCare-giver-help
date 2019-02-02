@@ -17,9 +17,7 @@ render() {
       <div>
         <MuiThemeProvider>
           <div>
-          <AppBar
-             title="Login"
-           />
+          
            <TextField
              hintText="Enter your Username"
              floatingLabelText="Username"
