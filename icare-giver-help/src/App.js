@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Dashboard from './components/dashboard/Dahboard'
-import Navbar from './components/layout/Navbar'
 import CreatePatient from './components/patients/CreatePatient'
 import PatientDetails from './components/patients/PatientDetails'
 
@@ -13,7 +12,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar/>
           <Switch>
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/create' component={CreatePatient} />
