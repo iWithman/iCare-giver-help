@@ -76,6 +76,7 @@ class Form extends Component {
 
     return (
       <Input
+        id={name}
         type={type}
         name={name}
         value={data[name]}

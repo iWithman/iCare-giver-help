@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import Joi from "joi-browser";
 import Form from "../common/form";
+import './Login.css';
 
 import { getSavedItems } from '../scripts/functions'
 
-const users = getSavedItems()
+const users = getSavedItems('users')
 
 class Login extends Form {
   state = {
@@ -26,7 +27,7 @@ class Login extends Form {
   doSubmit = (e) => {
     // Call the server
     e.preventDefault()
-    let user = users.find(user => user.username === this.state.data.username)
+    let user = users.find(user => user.username.toLowerCase() === this.state.data.username.toLowerCase())
     let alert = document.querySelector('.alert')
     if (user) {
       if (user.password === this.state.data.password) {
@@ -44,11 +45,10 @@ class Login extends Form {
 
   render() {
     return (
-      <div className='mart-5'>
-        <div className="alert" role="alert">
-        </div>
+      <div className="login">
+        <div className="alert"></div>
         <h1>Login</h1>
-        <form onSubmit={this.doSubmit}>
+        <form id="loginForm" onSubmit={this.doSubmit} className="children">
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Login")}
