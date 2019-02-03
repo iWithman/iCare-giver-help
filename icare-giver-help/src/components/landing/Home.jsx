@@ -16,21 +16,22 @@ const Home = () => {
       <main className='container-fluid'>
         <div className="about-section row text-center d-flex justify-content-between">
           <div className="col-md-12"><h2>About our project</h2></div>
-          <div className="col-md-4 img my-3">
+          
+          <div className="col-md-4 col-sm-12 img my-3 mx-auto">
             <div className="img__overlay d-flex flex-column">
               <h3>Problem</h3>
-              <p>People be gettin old and need caregivers</p>
+              <p className="lead">The pressure to monitor a patient's needs and schedule can lead to headaches that can easily be remedied</p>
             </div>
             <img src={busy_caregiver} className="rounded-circle p-0" alt="..." />
           </div>
-          <div className="col-md-4 img my-3">
+          <div className="col-md-4 col-sm-12 img my-3 mx-auto">
             <div className="img__overlay d-flex flex-column">
               <h3>Solution</h3>
-              <p>We help caregivers</p>
+              <p className="lead">Our app aims to provide a one stop shop for dealing with a patient's needs and schedule</p>
             </div>
             <img src={happy_caregiver} className="rounded-circle p-0" alt="..." />
           </div>
-          <div className="col-md-4 img my-3">
+          <div className="col-md-4  col-sm-12 img my-3 mx-auto">
             <div className="img__overlay d-flex flex-column">
               <h3>Who we are</h3>
               <p>We be flossin</p>

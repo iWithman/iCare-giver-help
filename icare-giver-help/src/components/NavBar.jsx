@@ -6,7 +6,7 @@ import { Nav, Navbar, NavDropdown} from 'react-bootstrap'
 const NavBar = () => {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" fixed="top">
         <Navbar.Brand> <NavLink className="m-2" to="/">Home</NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
