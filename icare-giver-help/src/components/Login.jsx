@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router'
 
 import Joi from "joi-browser";
 import Form from "../common/form";
@@ -17,7 +18,6 @@ class Login extends Form {
   schema = {
     username: Joi.string()
       .required()
-      .email()
       .label("Username"),
     password: Joi.string()
       .required()
@@ -31,8 +31,8 @@ class Login extends Form {
     let alert = document.querySelector('.alert')
     if (user) {
       if (user.password === this.state.data.password) {
-        alert.className += ' alert-success'
-        alert.textContent = 'Welcome to the site'
+        this.props.onLogin(true)
+        (window.location.assign('http://localhost:3000/'))
       }else {
         alert.className += ' alert-danger'
         alert.textContent = 'Incorrect password'

@@ -16,11 +16,10 @@ class SignUp extends Form {
   schema = {
     username: Joi.string()
       .required()
-      .email()
       .label("Username"),
     password: Joi.string()
       .required()
-      .min(7)
+      .min(5)
       .label("Password"),
     name: Joi.string()
       .required()
@@ -31,12 +30,13 @@ class SignUp extends Form {
     // Call the server
     e.preventDefault()
     users.push(this.state.data)
-    saveItem(users)
+    console.log(users)
+    saveItem('users',users)
   };
 
   render() {
     return (
-      <div>
+      <div className="login">
         <h1>Register</h1>
         <form onSubmit={this.doSubmit}>
           {this.renderInput("username", "Username")}
