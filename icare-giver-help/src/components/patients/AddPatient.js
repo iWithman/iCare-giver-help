@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 
+import { saveItem } from '../../scripts/functions'
+import { getSavedItems } from '../../scripts/functions'
+
+const patients = getSavedItems('patients')
+
 class AddPatient extends Component {
   state = {
     name: '',
     gender: '',
     age: 0,
-    phone: '',
-    address: ''
+    phone: 0,
+    address: '',
+    caregiver: ''
 
   }
 
@@ -18,13 +24,31 @@ class AddPatient extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state)
+    let patient = {
+      caregiver: this.state.caregiver,
+      name: this.state.name,
+      gender: this.state.gender,
+      age: this.state.age,
+      phone: this.state.phone,
+      address: this.state.address
+
+    }
+
+    patients.push(patient)
+    console.log(patients)
+    
+    saveItem('patients', patients)
   }
 
   render() {
     return (
-      <div className='container'>
+      <div className='container mt-5'>
+        <h2 className="display-2 text-center">Add a patient</h2>
         <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="caregiver">Caregiver</label>
+            <input type="text" id="caregiver" onChange={this.handleChange} className='form-control'/>
+          </div>
           <div className="form-group">
             <label htmlFor="gender">Name</label>
             <input type="text" id="name" onChange={this.handleChange} className='form-control'/>
@@ -39,7 +63,7 @@ class AddPatient extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
-            <input type="text" id="phone" onChange={this.handleChange} className='form-control'/>
+            <input type="number" id="phone" onChange={this.handleChange} className='form-control'/>
           </div>
           <div className="form-group">
             <label htmlFor="address">Adress</label>
