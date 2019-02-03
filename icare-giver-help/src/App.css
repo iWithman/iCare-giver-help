@@ -16,3 +16,13 @@ html {
   border-radius: 15px;
 }
 
+.dashboard {
+  background: 
+              url('./assets/iCarebg.jpg') center top no-repeat fixed;
+  /* background-size: cover;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+
+}

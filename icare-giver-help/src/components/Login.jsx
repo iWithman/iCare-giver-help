@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Joi from "joi-browser";
 import Form from "../common/form";
+import logo from '../assets/iCare.png'
 import './Login.css';
 
 class Login extends Form {
@@ -32,6 +33,7 @@ class Login extends Form {
   render() {
     return (
       <div className="login">
+        <img className="logo" src={logo} />
         <h1>Login</h1>
         <form id="loginForm" onSubmit={this.doSubmit} className="children">
           {this.renderInput("username", "Username")}

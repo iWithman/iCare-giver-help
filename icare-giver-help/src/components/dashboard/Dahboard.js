@@ -5,7 +5,9 @@ import PatientList from '../patients/PatientList'
 class Dashboard extends Component {
   render() {
     return (
-      <PatientList />
+      <div className="dashboard">
+        <PatientList />
+      </div>
     )
   }
 }
