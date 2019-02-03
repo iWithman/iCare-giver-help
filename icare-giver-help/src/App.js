@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/Dahboard'
 import AddPatient from './components/patients/AddPatient'
 import PatientDetails from './components/patients/PatientDetails'
 
-import Home from './components/Home';
+import Home from './components/landing/Home';
 import NavBar from './components/NavBar';
 import Error from './components/error';
 import Login from './components/Login';
