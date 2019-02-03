@@ -1,6 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "../common/form";
+import logo from '../assets/iCare.png'
 
 import { saveItem } from '../scripts/functions'
 import { getSavedItems } from '../scripts/functions'
@@ -37,6 +38,7 @@ class SignUp extends Form {
   render() {
     return (
       <div className="login">
+        <img className="logo" src={logo} />
         <h1>Register</h1>
         <form onSubmit={this.doSubmit}>
           {this.renderInput("username", "Username")}

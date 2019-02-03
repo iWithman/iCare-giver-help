@@ -3,6 +3,7 @@ import { Redirect } from 'react-router'
 
 import Joi from "joi-browser";
 import Form from "../common/form";
+import logo from '../assets/iCare.png'
 import './Login.css';
 
 import { getSavedItems } from '../scripts/functions'
@@ -47,6 +48,7 @@ class Login extends Form {
     return (
       <div className="login">
         <div className="alert"></div>
+        <img className="logo" src={logo} />
         <h1>Login</h1>
         <form id="loginForm" onSubmit={this.doSubmit} className="children">
           {this.renderInput("username", "Username")}

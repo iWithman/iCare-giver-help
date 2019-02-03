@@ -42,15 +42,25 @@ const PatientDetails = props => {
         <div className="col-md-3">
           <div className="card mb-4">
             <div className="card-header">Patient History</div>
-            <div className="card-body">Patient is basically dead</div>
+            <div className="card-body">
+              <ul>
+                <li>Patient has a history of hybpertension</li>
+                <li>In 2016, Patient was diagnosed with Congestive Heart Failue</li>
+              </ul>
+            </div>
           </div>
           <div className="card mb-4">
             <div className="card-header">Emergency Contact</div>
-            <div className="card-body">Someone come get this fool</div>
+            <div className="card-body">
+              <ul>
+                <li>Son: David Gibbens</li>
+                <li>Phone Number: 7548268279</li>
+              </ul>
+            </div>
           </div>
           <div className="card mb-4">
             <div className="card-header">Patient's Dr's</div>
-            <div className="card-body">Who to take this fool to</div>
+            <div className="card-body">Dr. Marry Smith</div>
           </div>
         </div>
       </div>

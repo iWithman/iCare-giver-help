@@ -5,7 +5,7 @@ import PatientList from '../patients/PatientList'
 class Dashboard extends Component {
   render() {
     return (
-      <div className="container-fluid mt-5">
+      <div className="dashboard">
         <PatientList />
       </div>
     )

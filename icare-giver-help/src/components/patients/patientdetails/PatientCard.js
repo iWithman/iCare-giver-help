@@ -23,10 +23,10 @@ class PatientCard extends Component {
                 <p className="text-muted">DOB, Age: <span className="text-dark">Aug 20 1952 - (66 years)</span></p>
               </div>
               <div className="col-md-6">
-                <p className="text-muted">Phone Number: <span className="text-dark">786-325-7651</span></p>
+                <p className="text-muted">Phone Number: <span className="text-dark">813-585-5228</span></p>
               </div>
               <div className="col-md-6">
-                <p className="text-muted">Address: <span className="text-dark">777 NW 73rd St</span></p>
+                <p className="text-muted">Address: <span className="text-dark">8107 NW 93rd Ave</span></p>
               </div>
             </div>
           </div>

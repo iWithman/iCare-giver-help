@@ -8,7 +8,7 @@ const PatientSummary = (props) => {
         <p className="card-text">Cared for by {props.patient.caregiver}</p>
       </div>
       <div className="card-footer d-flex justify-content-center">
-        <button className="btn btn-primary btn-large">View Patient Detail</button>
+        <a className="btn btn-primary btn-large" href="http://localhost:3000/patient/1">View Patient Detail</a>
       </div>
     </div>
   )
