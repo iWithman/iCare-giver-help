@@ -1,0 +1,12 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    margin: 3rem;
+}
+.children{
+    display: flex;
+    flex-direction: column;
+}
