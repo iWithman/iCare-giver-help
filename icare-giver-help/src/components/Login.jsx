@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Joi from "joi-browser";
 import Form from "../common/form";
+import './Login.css';
 
 class Login extends Form {
   state = {
@@ -22,13 +23,17 @@ class Login extends Form {
   doSubmit = () => {
     // Call the server
     console.log("Submitted");
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    
   };
 
   render() {
     return (
-      <div>
+      <div className="login">
         <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form id="loginForm" onSubmit={this.doSubmit} className="children">
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Login")}
